@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-bg-amber: #ff8f00;
+    --primary-bg-orange: #e65100;
+    --primary-bg-red: #e53935;
+    --text-color-dark: #141415;
+    --text-color-light: #444444;
+    --border-radius: 10px; 
+    --primary-font: 'Space-Mono', monospace;
+}
+
+html, body{
+    background: var(--primary-bg-amber);
+    color: var(--text-color-dark);
+    font-family: var(--primary-font);
+}
+
+p{
+    text-align: center;
+}
+
+section.main{
+    margin: 2rem auto;
+}
+
+.container{
+    width: 80%;
+    position: relative;
+    margin: auto;
+    padding: auto;
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+    padding: 2rem 0;
+    transition: .3s ease-in-out;
+}
+
+.feature:hover{
+    transform: translateY(5px);
+}
+
+.feature h3:nth-child(1){
+    line-height: 2rem;
+    text-align: center;
+}
+
+.btn{
+    display: block;
+    margin: 1rem auto;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    color: #FFFFFF;
+    border-radius: var(--border-radius);
+    background: var(--primary-bg-red);
+    transition: .3s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.login__btn{
+    display: block;
+}
+
+.user__img{
+    display: none;
+}
+.signout__btn{
+    display: none;
+}
+
+#post__card{
+    background: #dff1f5;
+    width: 80%;
+    display: block;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea
+{
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--primary-bg-red);
+    margin: 1rem auto;
+    padding: .5rem;
+}
+
+form input:focus{
+    outline: none;
+    box-shadow: none;
+    background-image: none;
+}
+
+.feature--three{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feature--three div{
+    background: #dff1f5;
+    padding: 2rem;
+    margin: 1rem auto;
+}
