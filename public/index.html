@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.2.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <section class="main">
+      <div class="container">
+
+        <div class="section__auth feature feature--one">
+          <h3>Working with Oauth in Firebase</h3>
+          <p>Firebase supports Google, Facebook, Github, Twitter etc. and uses JWT for authentication. This is crazy.</p>
+          <div class="feature__test">
+            <button class = "btn login__btn">Login/Authenticate</button>
+            <img class = "user__img" src = "" alt = "User image" />
+            <p>Click on Button to Login</p>
+            <button class = "btn signout__btn">Logout</button>
+          </div>
+        </div>
+
+        <div class="section__database feature feature--two">
+          <h3>Working with Databases in Firebase</h3>
+          <p>Firebase supports Cloud Firestore and Real-time databases which are all based on NoSQL modelling.</p>
+          <div class="feature__test">
+            <button class = "btn fetchposts__btn">Fetch posts from Cloud Firestore</button>
+            <div id = "posts">
+
+            </div>
+
+            <form>
+              <div>
+                <label for = "title">Title :-</label>
+                <input type="text" name="title" id="title" class="title">
+              </div>
+              <div>
+                <label for = "content">Content :-</label>
+                <textarea rows="5" name="content" id="content"></textarea>
+              </div>
+              <div>
+                <label for="featured">Featured :-</label>
+                <input type="radio" id="yes" name="featured" value="yes">
+                <label for="yes">Yes</label><br>
+                <input type="radio" id="no" name="featured" value="no">
+                <label for="female">No</label><br>
+              </div>
+              <button type="submit" class = "btn submitpost__btn">Submit</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="section__storage feature feature--three">
+          <h3>Working with Storage in Firebase</h3>
+          <p>Firebase storage for storing file buckets i.e images, videos, text documents etc.</p>
+
+          <div>
+            <label for="file">Upload File</label>
+            <input type="file" id="file" class="file" />
+          </div>
+
+          <img id="uploadedImg" src="" alt="" />
+          
+        </div>
+      </div>
+    </section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
